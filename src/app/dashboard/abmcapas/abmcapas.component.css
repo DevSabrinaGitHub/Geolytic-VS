@@ -1,0 +1,6 @@
+.custom-th {
+    max-width: 150px !important;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    overflow: hidden; /* Oculta cualquier contenido que desborde */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final si el contenido es demasiado largo */
+  }

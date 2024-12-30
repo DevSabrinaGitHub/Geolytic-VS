@@ -1,0 +1,56 @@
+
+<div class="login-page fondo">
+    <div class="login-box">
+      <!-- /.login-logo -->
+      <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+          <!-- <a href="../../index2.html" class="h1"><b>War</b>Room </a> -->
+          <img width="100%" src="assets/Logotipo.png"/>
+        </div>
+        <div class="card-body">
+          <img width="100%" src="assets/linea.png"/>
+          <p class="title">Registra tu cuenta</p>
+    
+          
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" class="form-control" formControlName="username" required/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password" required/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirmar Password</label>
+              <input type="password" class="form-control" formControlName="confirmPassword" required/>
+              <div *ngIf="form.errors?.['mismatch']" class="text-danger">
+                Las contraseñas no coinciden.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" formControlName="nombre_persona" required/>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" formControlName="email" required/>
+              </div>
+            <div class="row">
+              <div class="col-4">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Registrar</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+          <!-- /.social-auth-links -->
+    
+          
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+   </div>
+   

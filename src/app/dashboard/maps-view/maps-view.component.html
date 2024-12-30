@@ -1,0 +1,97 @@
+
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<div class="content-wrapper">
+
+  <div class="card">
+      <div class="card-header">
+
+          <div class="row">
+            <h3 class="card-title">Filtos de Busqueda</h3>
+          </div>
+          <form [formGroup]="form_busqueda" >
+              <div class="row">
+                <div class="col-2">
+                  <label class="form-label">Desde</label>
+                  <input type="date"  (change)="busqueda()" class="form-control" formControlName="fecha_desde">
+
+                </div>
+                <div class="col-2">
+                  <label class="form-label">Hasta</label>
+                  <input type="date"  (change)="busqueda()" class="form-control" formControlName="fecha_hasta">
+
+                </div>
+
+
+              </div>
+          </form>
+
+      </div>
+  </div>
+
+<div id="div-map" class="map-container">
+  <mgl-map
+  [style]= "style"
+  [zoom]="[13]"
+  [center]="[-54.57774734, -25.60424243]"
+  [attributionControl]="false"
+  [logoPosition] = "'top-right'"
+  [cursorStyle]="cursorStyle"
+  >
+
+  <mgl-control mglFullscreen></mgl-control>
+
+  <mgl-control
+    mglGeolocate
+    [positionOptions]="{
+      enableHighAccuracy: true
+    }"
+    [trackUserLocation]="true"
+  ></mgl-control>
+
+  <mgl-control mglNavigation></mgl-control>
+
+  <mgl-control mglScale unit="metric" position="bottom-left"></mgl-control>
+
+  <mgl-control mglAttribution position="bottom-right"
+    [customAttribution]="[
+        '<a href=&quot;https://www.vises.com.ar; target=&quot;_blank&quot;>Más información, mejores decisiones</a>',
+        'Vises'
+      ]" [compact]="true"></mgl-control>
+
+  <mgl-geojson-source id="src_nodos"
+    [data]="nodos" type="geojson">
+  </mgl-geojson-source>
+
+  <mgl-layer
+    id="ly_nodos"
+    type="circle"
+    source="src_nodos"
+    [paint]="{
+      'circle-radius': 6,
+      'circle-color': ['get', 'color']
+    }"
+
+    (layerMouseEnter)="cursorStyle = 'pointer'"
+    (layerMouseLeave)="cursorStyle = ''"
+   ></mgl-layer>
+
+    <!-- [lngLat]="coord" -->
+      <!-- <mgl-popup *ngIf="selectedElement && selectedLngLat" -->
+      <!-- [lngLat]="selectedLngLat" -->
+      <!-- [closeOnClick]="false"> -->
+      <!-- <span [innerHTML]="selectedPoint.properties?.['elevation']"></span> -->
+      <!-- <span [innerHTML]="selectedElement?.['elevation']"></span> -->
+      <!-- <span [innerHTML]="pop"></span> -->
+    <!-- </mgl-popup> -->
+  </mgl-map>
+</div>
+<!-- <button (click)="changeStyle('code')" type="button" name="" id="" class="btn btn-primary btn-lg btn-block">Capa Base</button> -->
+<!-- <button (click)="changeStyle('streets')" type="button" name="" id="" class="btn btn-primary btn-lg btn-block">Capa Base 2</button> -->
+
+
+
+  </div>
+
+<app-footer></app-footer>

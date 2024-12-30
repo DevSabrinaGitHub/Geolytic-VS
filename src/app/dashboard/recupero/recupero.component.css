@@ -1,0 +1,7 @@
+::ng-deep .amarillo {
+    background: #FFB717;
+   color: black;
+   border-radius: 50px;
+   border: 1px solid black;
+   width: 100%;
+}

@@ -1,0 +1,29 @@
+<div class="login-page fondo">
+    <div class="login-box">
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <img width="100%" src="assets/Logotipo.png"/>
+            </div>
+            <div class="card-body">
+                <img width="100%" src="assets/linea.png"/>
+          <p class="title">Recupero de contraseña</p>
+                <form action="#" [formGroup]="form" (ngSubmit)="enviarEmail()" method="post">
+                    <div>
+                        <label for="email">Introduzca su dirección de correo:</label>
+                        <input class="form-control" formControlName="email" type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary amarillo">Recuperar Password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+

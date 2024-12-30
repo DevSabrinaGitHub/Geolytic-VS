@@ -1,0 +1,75 @@
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" (click)="resize()" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/dashboard" class="nav-link"></a>
+      </li><li class="nav-item">
+        <a class="nav-link"  data-toggle="modal" data-target="#CambioPass"  href="#" role="button">
+          <i class="fas fa-fingerprint"></i>
+          Contraseña
+        </a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+
+          <button class="btn btn-outline-danger" (click)="loggout()">Salir</button>
+
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+  <div class="modal fade" id="CambioPass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cambio de contraseña</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card">
+
+            <div class="card-body">
+              <form action="#" [formGroup]="form_pass" (ngSubmit)="cambio_pass()"  method="post">
+                <div class="mb-3">
+                  <label class="form-label">Nuevo Password</label>
+                  <input required type="password" required="required" class="form-control" formControlName="pass">
+
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Repita Nuevo password</label>
+                  <input required type="password" required="required" class="form-control" formControlName="pass2">
+
+                </div>
+
+
+                <div class="row">
+
+                  <div class="col-4">
+                    <button type="button" (click)="cambio_pass()"  class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+

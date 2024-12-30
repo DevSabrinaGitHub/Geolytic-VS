@@ -1,0 +1,38 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/dashboard" class="brand-link">
+      <!-- <span class="brand-text font-weight-light">geolytic</span> -->
+      <img width="43%" src="assets/Logotipo.png"/>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li *ngFor="let item of menuItems" class="nav-item" [ngClass]="{'d-none': item.show === false}">
+              <a [href]="item.route" class="nav-link">
+                <i class="nav-icon" [ngClass]="item.icon"></i>
+                <p>
+                  {{ item.name }}
+                  <i class="right fas file-chart-pie"></i>
+                </p>
+              </a>
+            </li>
+            
+            
+            <li  class="nav-item">
+              <button (click)="salir()" type="button" class="btn btn-warning">
+               Salir <span class="caret"></span>
+              </button>
+            </li>
+          
+
+          
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

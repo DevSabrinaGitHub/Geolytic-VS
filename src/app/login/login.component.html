@@ -1,0 +1,52 @@
+
+   <div class="login-page fondo">
+    <div class="login-box">
+      <!-- /.login-logo -->
+      <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+          <!-- <a href="../../index2.html" class="h1"><b>War</b>Room </a> -->
+          <img width="100%" src="assets/Logotipo.png"/>
+        </div>
+        <div class="card-body">
+          <img width="100%" src="assets/linea.png"/>
+          <p class="title">Acceder a tu cuenta</p>
+    
+          <form action="#" [formGroup]="form" (ngSubmit)="login()"  method="post">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" formControlName="usuario"  placeholder="Usuario" required>
+              
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+             
+            </div>
+            <div class="row" style="text-align: center;">
+              
+              <!-- /.col -->
+              <div class="col-12">
+                <button type="button" (click)="login()" class="btn btn-primary amarillo">INICIAR SESION</button>
+              </div>
+              <i class="fas fa-line"></i>
+              <div class="col-12">
+
+                <button type="button" (click)="registro()" class="btn btn-secundary negro">REGISTRO DE USUARIO</button>
+              </div>
+              <div class="col-12">
+
+                <button type="button" (click)="recupero_cuenta()" class="btn btn-outline">Recuperar Cuenta</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+    
+         
+          <!-- /.social-auth-links -->
+    
+          
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+   </div>
+   

@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+ @import 'maplibre-gl/dist/maplibre-gl.css';
+ @import '@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css';
+ @import '@watergis/maplibre-gl-legend/css/styles.css';
+ @import '@watergis/maplibre-gl-export/dist/maplibre-gl-export.css';
+
+ /*@media screen and (min-width: 640px)*/
+ .maplibregl-ctrl-geocoder.maplibregl-ctrl-geocoder--collapsed {
+    width: 29px;
+    min-width: 29px;
+ }
+
+ .maplibregl-ctrl-geocoder--input {
+  height: 29px;
+  padding: 6px 35px;
+}
+.maplibregl-ctrl-geocoder--icon-search {
+  left: 4px;
+  width: 20px;
+  height: 20px;
+}
+/*@media screen and (min-width: 640px)*/
+.maplibregl-ctrl-geocoder--icon {
+  top: 5px;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn-group {
+  margin: 5px 0px 0px 5px;
+}
+
+.capas-item {
+  font: 14px Helvetica, sans-serif;
+  background-color: rgba(255, 255, 255, 0.7);
+  align-self: center;
+  padding: 5px 5px 5px 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 95%;
+  display: none;
+}
+
+.capas-item label{
+  padding: 0px 15px 0px 15px;
+  width: 75%;
+}
+
+.capas-item button{
+  padding: 0px 5px 0px 5px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

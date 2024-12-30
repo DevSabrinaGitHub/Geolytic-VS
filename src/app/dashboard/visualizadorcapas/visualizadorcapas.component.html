@@ -1,0 +1,8 @@
+<div class="capas-item">
+    <button class="capas-item-close-button" type="button" aria-label="Close capas"  id="ListaCapas">×</button>
+    <button (click)="agregaCapa()" [disabled]="isdisabled" type="button" class="btn btn-default">
+    Ver capas <i class="fas fa-layer-group"></i> 
+    </button>
+    <app-capas *ngFor="let cadacapa of listacapas" [capa]="cadacapa"></app-capas>
+  </div>
+  

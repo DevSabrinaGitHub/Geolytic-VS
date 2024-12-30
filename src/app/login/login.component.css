@@ -1,0 +1,47 @@
+::ng-deep .card-primary.card-outline {
+    border-top: 0px solid #007bff;
+
+    
+}
+
+::ng-deep .card-header {
+    background-color: transparent;
+    border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+    padding: 1.75rem 4.25rem;
+    position: relative;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+::ng-deep .card-body {
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0rem 4.25rem 5rem
+}
+
+::ng-deep .amarillo {
+     background: #FFB717;
+    color: black;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+::ng-deep .negro {
+    background: black;
+   color: white;
+   border-radius: 50px;
+   border: 1px solid #FFB717;
+   width: 100%;
+}
+
+::ng-deep .fondo {
+    background: #343A40;
+}
+
+::ng-deep .title {
+font-size: 16px;
+font-weight: 600;
+line-height: 21.79px;
+text-align: center;
+}

@@ -1,0 +1,14 @@
+.modal.show {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal .modal-dialog {
+    margin: 1.75rem auto;
+  }
+  
+  .modal .modal-content {
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }

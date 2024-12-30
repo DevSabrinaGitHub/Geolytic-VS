@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="content-wrapper">
+    <section class="content">
+      
+        <section class="content-header">
+          <div class="container-fluid">
+          <div class="row mb-2">
+          <div class="col-sm-6">
+          <h1>Capas</h1>
+          </div>
+          <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+          
+          </ol>
+          </div>
+          </div>
+          </div>
+      </section>
+      <!-- Default box -->
+      <div class="card">
+        
+        <div class="card-header">
+           <ng-select [items]="uniqueAttributes" [(ngModel)]="selectedAttributes" [multiple]="true" placeholder="Selecciona atributos">
+          </ng-select>
+          <button class="btn btn-success" (click)="logSelectedAttributes()">Buscar</button>
+
+        </div>
+      
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                
+                        <tr>
+                          <th>Id</th>
+                          <th>Nombre</th>
+                          <th class="custom-th">Atributos</th>
+                          <th>Tipo de capa</th>
+                          <th class="custom-th">Estado</th>
+                          <th>#</th>
+                        </tr>
+                        <tr *ngFor="let item of datos">
+                          <td>{{item.id}}</td>
+                          <td>{{item.nombre}}</td>
+                          <td class="custom-th">{{item.atributos}}</td>
+                          <td>{{item.type}}</td>
+                          <td>{{item.estado}}</td>
+                          
+                          <td>
+                            <button 
+                              class="btn" 
+                              [ngClass]="item.estado === 'activo' ? 'btn-danger' : 'btn-success'"
+                              (click)="item.estado === 'activo' ? bajaItem(item) : altaItem(item)">
+                              {{ item.estado === 'activo' ? 'Dar de Baja' : 'Dar de Alta' }}
+                            </button>
+                          </td>
+                          
+                        </tr>
+                      </table>
+                      
+              
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          Geolytic Vises
+        </div>
+        <!-- /.card-footer-->
+      </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  
+<app-footer></app-footer>

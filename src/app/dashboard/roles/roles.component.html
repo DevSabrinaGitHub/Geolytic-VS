@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="content-wrapper">
+    <section class="content">
+      
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Roles</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <!-- Breadcrumb content -->
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Roles</h3>
+            <button class="btn btn-primary float-right"  (click)="nuevoRol()">Nuevo Rol</button>
+          </div>
+          <div class="card-body">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>ID Rol</th>
+                  <th>Descripción</th>
+                  <th>Fecha y Hora de Creación</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let rol of roles">
+                  <td>{{rol.id_rol}}</td>
+                  <td>{{rol.descripcion}}</td>
+                  <td>{{rol.fecha_hora_creacion}}</td>
+                  <td>
+                    <button class="btn btn-primary" (click)="editarRol(rol)">Editar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <!-- /.card-body -->
+          <div class="card-footer">
+            Geolytic Vises
+          </div>
+          <!-- /.card-footer-->
+        </div>
+        <!-- /.card -->
+    </section>
+    <!-- /.content -->
+</div>
+
+<!-- Modal para Crear/Editar Rol -->
+<div class="modal" [ngClass]="{'show': showModal}" tabindex="-1" [style.display]="showModal ? 'block' : 'none'">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rolModalLabel">{{accion}} Rol</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <form id="rolForm" [formGroup]="form" (ngSubmit)="accion_form()">
+              <div class="mb-3">
+                <label class="form-label">Descripción</label>
+                <input type="text" class="form-control" formControlName="descripcion" required/>
+              </div>
+              <div class="mb-3">
+                <input type="hidden" formControlName="id_rol" />
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Guardar</button>
+                </div>
+                <!-- /.col -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
