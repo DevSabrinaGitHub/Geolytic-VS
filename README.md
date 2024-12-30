@@ -1,5 +1,13 @@
 # Proyecto [GEOLYTIC]
 
+GeoLytic
+GeoLytic transforma la manera en que gestionamos y compartimos información geográfica, ofreciendo una alternativa moderna, eficiente y accesible a los tradicionales Sistemas de Información Geográfica (SIG) de escritorio.
+
+Características
+Accesibilidad total: Accede a GeoLytic desde cualquier navegador web en tu computadora, celular o tablet.
+Eficiencia: Simplifica los procesos de análisis y visualización de datos espaciales.
+Flexibilidad: Diseñado para funcionar en múltiples dispositivos sin necesidad de instalaciones complicadas.
+
 
 ## Requisitos previos
 
