@@ -20,8 +20,7 @@ Asegúrar tener instalados los siguientes programas antes de comenzar:
      
 
 ## Instalación del proyecto
-
-Pasos para configurar el proyecto en tu entorno local:
+Pasos para configurar el proyecto en entorno local:
 
 1. Clonar el repositorio:
    git clone https://github.com/usuario/proyecto.git
@@ -37,8 +36,6 @@ Configuración inicial del proyecto:
 
 ### Implementar las siguientes funcionalidades:
  Funcionalidad 1: Descripción breve.
- Funcionalidad 2: Descripción breve.
- Funcionalidad 3: Descripción breve.
  
 ### Pruebas y revisiones:
 Cada integrante debe probar su código antes de crear un Pull Request.
